@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Roboto;
+}
+body header {
+  height: 70px;
+  width: 100%;
+  box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
+}
+body header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+body header a img {
+  height: 30px;
+}
+body .location {
+  padding: 10px 0;
+}
+body .location .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .location .container img {
+  margin-right: 10px;
+  height: 18px;
+}
+
+/*# sourceMappingURL=style.css.map */

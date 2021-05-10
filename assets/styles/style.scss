@@ -1,0 +1,42 @@
+@import './vars.scss';
+@import './global.scss';
+
+body {
+  margin: 0;
+  font-family: Roboto;
+
+  header {
+    height: $menu-h;
+    width: 100%;
+    box-shadow: $shadow;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+      img {
+        height: 30px;
+      }
+    }
+  }
+
+  .location {
+    padding: 10px 0;
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin-right: 10px;
+        height: 18px;
+      }
+
+      p {
+
+      }
+    }
+  }
+}
