@@ -11,9 +11,6 @@ body {
     box-shadow: $shadow;
 
     a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       height: 100%;
       width: 100%;
 
@@ -24,19 +21,50 @@ body {
   }
 
   .location {
-    padding: 10px 0;
+    background-color: $grey-dark;
+    padding: 15px 0;
+    
     .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
       img {
         margin-right: 10px;
         height: 18px;
       }
 
       p {
-
+        margin: 0;
+        font-weight: bold;
+        opacity: 0.7;
       }
+    }
+  }
+
+  .explore {
+    flex-direction: column;
+    text-align: center;
+    background-color: $grey-light;
+
+    h2 {
+      margin: 0;
+      padding: 20px 0 10px;
+    }
+
+    p {
+      margin: 
+      0;
+      color: $grey-text-light;
+    }
+
+    button {
+      font-size: 1.1em;
+      padding: 15px 20px;
+      border-radius: 50px;
+      background: linear-gradient($primary-color, $secondary-color);
+      border: none;
+      color: white;
+      box-shadow: $shadow;
+      letter-spacing: 0.5px;
+      margin: 30px 0 50px;
     }
   }
 }

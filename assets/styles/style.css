@@ -1,3 +1,9 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   margin: 0;
   font-family: Roboto;
@@ -8,9 +14,6 @@ body header {
   box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
 }
 body header a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   width: 100%;
 }
@@ -18,16 +21,41 @@ body header a img {
   height: 30px;
 }
 body .location {
-  padding: 10px 0;
-}
-body .location .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #E5E5E5;
+  padding: 15px 0;
 }
 body .location .container img {
   margin-right: 10px;
   height: 18px;
+}
+body .location .container p {
+  margin: 0;
+  font-weight: bold;
+  opacity: 0.7;
+}
+body .explore {
+  flex-direction: column;
+  text-align: center;
+  background-color: #F4F4F4;
+}
+body .explore h2 {
+  margin: 0;
+  padding: 20px 0 10px;
+}
+body .explore p {
+  margin: 0;
+  color: #a8a8a8;
+}
+body .explore button {
+  font-size: 1.1em;
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  border: none;
+  color: white;
+  box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+  margin: 30px 0 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
