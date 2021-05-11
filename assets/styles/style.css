@@ -103,5 +103,76 @@ body .operation .container__cards .card:nth-child(3) {
 body .operation .container__cards .card:nth-child(3)::before {
   content: "3";
 }
+body .restaurants {
+  padding: 0 10px;
+  color: black;
+  background-color: #F4F4F4;
+  padding-bottom: 20px;
+}
+body .restaurants h1 {
+  padding-top: 40px;
+}
+body .restaurants a {
+  text-decoration: none;
+  height: 300px;
+}
+body .restaurants a .card {
+  width: 100%;
+  height: 280px;
+  border-radius: 15px;
+  background-color: white;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.1);
+}
+body .restaurants a .card .card__image-container {
+  width: 100%;
+  height: 180px;
+}
+body .restaurants a .card .card__image-container img {
+  object-fit: cover;
+  height: 180px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+body .restaurants a .card .card__text-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 60px;
+  padding: 20px 10px;
+  color: black;
+}
+body .restaurants a .card .card__text-container h2 {
+  margin: 0 0 10px;
+}
+body .restaurants a .card .card__text-container p {
+  margin: 0;
+  font-size: 1.2em;
+}
+body .restaurants a .card .card__text-container .heart {
+  position: absolute;
+  top: calc(50% - 20px);
+  bottom: calc(50% - 20px);
+  right: 20px;
+  height: fit-content;
+}
+body .restaurants a .card .card__text-container .heart img {
+  height: 35px;
+}
+body .restaurants a .card.new {
+  position: relative;
+}
+body .restaurants a .card.new::before {
+  content: "Nouveau";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 7px 12px;
+  color: #0F7753;
+  font-weight: 600;
+  background-color: #8ADEC5;
+  border-radius: 2px;
+}
 
 /*# sourceMappingURL=style.css.map */
