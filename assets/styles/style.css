@@ -37,6 +37,8 @@ body .explore {
   flex-direction: column;
   text-align: center;
   background-color: #F4F4F4;
+  margin-bottom: 40px;
+  padding: 20px;
 }
 body .explore h2 {
   margin: 0;
@@ -59,6 +61,7 @@ body .explore button {
 }
 body .operation {
   padding: 0 10px;
+  padding-bottom: 20px;
 }
 body .operation .container__cards .card {
   position: relative;
@@ -107,7 +110,7 @@ body .restaurants {
   padding: 0 10px;
   color: black;
   background-color: #F4F4F4;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 body .restaurants h1 {
   padding-top: 40px;
@@ -173,6 +176,35 @@ body .restaurants a .card.new::before {
   font-weight: 600;
   background-color: #8ADEC5;
   border-radius: 2px;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #363636;
+  color: white;
+  padding: 30px;
+}
+body footer img {
+  height: 25px;
+  filter: invert(1);
+  margin-bottom: 20px;
+}
+body footer .footer-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+body footer .footer-item img {
+  height: 20px;
+  width: 20px;
+  margin: 0 10px 0 0;
+}
+body footer .footer-item a {
+  margin: 0;
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
