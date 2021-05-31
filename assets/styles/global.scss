@@ -1,5 +1,73 @@
+* {-webkit-font-smoothing: antialiased;}
+
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.shadow {
+  box-shadow: $shadow;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+
+  header {
+    height: $menu-h;
+    width: 100%;
+
+    a {
+      height: 100%;
+      width: 100%;
+
+      img {
+        height: 30px;
+      }
+    }
+  }
+
+  .heart {  
+    position: absolute;
+    top: calc(50% - 20px);
+    bottom: calc(50% - 20px);
+    right: 20px;
+    padding: 0;
+    border: none;  
+    height: 35px;
+    width: 35px;
+    background:-moz-linear-gradient(top, $primary-color 0%, $secondary-color 100%); 
+    background: -webkit-linear-gradient(top, $primary-color 0%,$secondary-color 100%); 
+    background: linear-gradient(to bottom, $primary-color 0%,$secondary-color 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+
+    input {
+      display: none;
+    }
+
+    .far {
+      display: initial;
+      font-size: 35px;
+    }
+
+    .fa {
+      display: none;
+      font-size: 35px;
+    }
+
+
+    &:focus {
+      .fa {
+        display: block;
+      }
+
+      .far {
+        display: none;
+      }
+    }
+  }
 }
