@@ -11,63 +11,106 @@
 }
 
 body {
+  position: relative;
   margin: 0;
   font-family: Roboto, sans-serif;
 
   header {
     height: $menu-h;
     width: 100%;
+    position: relative;
 
-    a {
+    .logo {
       height: 100%;
-      width: 100%;
+      width: calc(100% - 20px);
 
       img {
         height: 30px;
+      }
+    }
+
+    a {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translate(0, -50%);
+
+      i {
+        font-size: 20px;
+        color: black;
       }
     }
   }
 
   .heart {  
     position: absolute;
-    top: calc(50% - 20px);
-    bottom: calc(50% - 20px);
     right: 20px;
-    padding: 0;
-    border: none;  
     height: 35px;
     width: 35px;
-    background:-moz-linear-gradient(top, $primary-color 0%, $secondary-color 100%); 
-    background: -webkit-linear-gradient(top, $primary-color 0%,$secondary-color 100%); 
-    background: linear-gradient(to bottom, $primary-color 0%,$secondary-color 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color:transparent;
+    opacity: 1;
 
-    input {
-      display: none;
+    .fas {
+      display: block;
+      font-size: 30px;
+      position: absolute;
+      color: transparent;
+      -webkit-text-stroke: 2px black;
+      opacity: 0.5;
     }
 
-    .far {
-      display: initial;
-      font-size: 35px;
+    .fas:hover {
+      background: linear-gradient(#FF79DA, #9356DC);
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 0px;
+      opacity: 1;
+      transition: all 1s ease-in-out;
     }
+  }
+}
 
-    .fa {
-      display: none;
-      font-size: 35px;
-    }
-
-
-    &:focus {
-      .fa {
-        display: block;
+.loader {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(252, 252, 252);
+  animation: loader-container 3.6s forwards cubic-bezier(1, 0.09, 0.93, 0.07);
+  z-index: 10;
+  
+  .ball-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  
+    .ball {
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      margin: 0 10px;
+      animation-name: loader;
+      animation-duration: 1s;
+      animation-iteration-count: 3;
+    
+      &-1 {
+        background-color: $primary-color;
       }
-
-      .far {
-        display: none;
+    
+      &-2 {
+        background-color: $secondary-color;
+        animation-delay: 0.1s;
+      }
+    
+      &-3 {
+        background-color: $third-color;
+        animation-delay: 0.2s;
       }
     }
   }
+}
+
+.fadeInRight {
+  animation: fadeInRight .6s forwards;
 }

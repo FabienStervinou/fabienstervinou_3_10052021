@@ -36,21 +36,28 @@ body {
     }
 
     p {
-      margin: 
-      0;
+      margin: 0;
       color: $grey-text-light;
     }
 
-    button {
+    .styled-btn {
       font-size: 1.1em;
+      margin: 30px 0 50px;
       padding: 15px 20px;
       border-radius: 50px;
-      background: linear-gradient($primary-color, $secondary-color);
+      background-image: linear-gradient(170deg, $secondary-color, $primary-color);
       border: none;
       color: white;
       box-shadow: $shadow;
       letter-spacing: 0.5px;
-      margin: 30px 0 50px;
+      transition: .3s;
+
+      &:hover {
+        background-color: #fff;
+        box-shadow: $shadow-hover;
+        filter: brightness(1.05);
+        transition: all .3s linear;
+      }
     }
   }
 
@@ -70,12 +77,13 @@ body {
         background-color: $grey-light;
         border-radius: 30px;
         box-shadow: $shadow;
+        z-index: 0;
 
-        img {
+        i {
           height: 18px;
           color: $grey-text-light;
-          opacity: .6;
           margin-right: 20px;
+          font-size: 1.1em;
         }
 
         p {
@@ -97,7 +105,7 @@ body {
           font-size: .8em;
         }
 
-        &:nth-child(2) &::before {
+        &:nth-child(2)::before {
           content: "2";
         }
 
@@ -108,8 +116,8 @@ body {
             content: "3";
           }
 
-          img {
-            // TODO: Change img color
+          i {
+            color: $primary-color;
           }
         }
 
@@ -221,6 +229,7 @@ body {
 
 main.menu {
   position: relative;
+  margin-bottom: -40px;
 
   section.restaurant__image {
 
@@ -256,10 +265,24 @@ main.menu {
 
       h3 {
         position: relative;
-        width: fit-content;
+        width: auto;
         text-transform: uppercase;
         color: $grey-text-light;
-
+        
+        &:nth-child(1) {
+          animation-delay: 0s;
+        }
+        
+        &:nth-of-type(2) {
+          opacity: 0;
+          animation-delay: .9s;
+        }
+        
+        &:nth-of-type(3) {
+          opacity: 0;
+          animation-delay: 1.8s;
+        }
+        
         &:after {
           content: "";
           position: absolute;
@@ -285,8 +308,13 @@ main.menu {
           box-shadow: $shadow;
           border-radius: 20px;
           background-color: $grey-light;
-          z-index: 0;
           overflow: hidden;
+          animation: fadeInUp .6s linear;
+          animation-fill-mode: both;
+
+          &:nth-child(1) { animation-delay: .2s; }
+          &:nth-child(2) { animation-delay: .4s; }
+          &:nth-child(3) { animation-delay: .6s; }
           
           .card-wrapper {
             display: flex;
@@ -294,6 +322,7 @@ main.menu {
             flex-grow: 1;
             flex-direction: column;
             overflow: hidden;
+            flex-shrink: 10;
             
             .card-title {
               font-size: 1.2em;
@@ -337,7 +366,6 @@ main.menu {
             align-self: stretch;
             background-color: $validate-color;
             border-radius: 0 20px 20px 0;
-
             transition: width .4s;
             width: 0;
             
@@ -366,6 +394,18 @@ main.menu {
               animation-delay: .2s;
             }
           }
+        }
+
+        &.plat li { 
+          &:nth-child(1) { animation-delay: 1.2s; }
+          &:nth-child(2) { animation-delay: 1.4s; }
+          &:nth-child(3) { animation-delay: 1.6s; }
+        }
+
+        &.dessert li { 
+          &:nth-child(1) { animation-delay: 2.2s; }
+          &:nth-child(2) { animation-delay: 2.4s; }
+          &:nth-child(3) { animation-delay: 2.6s; }
         }
       }
     }
