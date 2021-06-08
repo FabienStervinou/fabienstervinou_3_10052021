@@ -45,8 +45,8 @@ body {
   .heart {  
     position: absolute;
     right: 20px;
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     opacity: 1;
 
     .fas {
@@ -130,12 +130,6 @@ body {
     filter: brightness(1.05);
     transition: all .3s linear;
   }
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .fadeInRight {

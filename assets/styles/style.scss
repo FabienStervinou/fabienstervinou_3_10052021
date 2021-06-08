@@ -48,6 +48,14 @@ body {
   .operation {
     padding: $container-padding;
     padding-bottom: 20px;
+
+    .operation-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 720px;
+      margin: 0 auto;
+    }
     
     .container__cards {
 
@@ -115,9 +123,16 @@ body {
     background-color: $grey-light;
     padding-bottom: 40px;
 
-    h1 {
-      padding-top: 40px;
-    }
+    .restaurants-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 720px;
+      margin: 0 auto;
+      
+      h1 {
+        padding-top: 40px;
+      }
       
       .card {
         width: 100%;
@@ -147,20 +162,20 @@ body {
           height: 60px;
           padding: 20px 10px;
           color: black;
-
+          
           h2 {
             margin: 0 0 10px;
           }
-
+          
           p {
             margin: 0;
             font-size: 1.2em;
           }
         }
-
+        
         &.new {
           position: relative;
-
+          
           &::before {
             content: "Nouveau";
             position: absolute;
@@ -174,8 +189,9 @@ body {
           }
         }
       }
+    }
   }
-
+    
   footer {
     display: flex;
     flex-direction: column;
@@ -183,6 +199,7 @@ body {
     background-color: #363636;
     color: white;
     padding: 30px;
+    min-height: 200px;
 
     img {
       height: 25px;
@@ -209,14 +226,25 @@ body {
       }
     }
   }
+
+  @media only screen and (min-width: 740px) {
+    footer {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .footer-group {
+        flex-direction: row;
+      }
+    }
+  }
 }
 
-main.menu {
+.menu {
   position: relative;
   margin-bottom: -40px;
 
-  section.restaurant__image {
-
+  .restaurant__image {
     img {
       height: 200px;
       width: 100%;
@@ -224,7 +252,7 @@ main.menu {
     }
   }
 
-  section.restaurant__menu {
+  .restaurant__menu {
     position: relative;
     top: -40px;
     border-radius: 40px 40px 0 0;
@@ -233,163 +261,175 @@ main.menu {
 
     header {
       position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 720px;
+      margin: 0 auto;
 
       h2 {
         margin: 10px 0 0 0;
         font-size: 2em;
         font-family: $font-secondary;
       }
-
-      .heart {
-        top: 0;
-      }
     }
 
     .restaurant__menu-list {
 
-      h3 {
-        position: relative;
-        width: auto;
-        text-transform: uppercase;
-        color: $grey-text-light;
-        
-        &:nth-child(1) {
-          animation-delay: 0s;
-        }
-        
-        &:nth-of-type(2) {
-          opacity: 0;
-          animation-delay: .9s;
-        }
-        
-        &:nth-of-type(3) {
-          opacity: 0;
-          animation-delay: 1.8s;
-        }
-        
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: -8px;
-          left: 0;
-          width: 40px;
-          height: 4px;
-          background-color: $third-color;
-        }
-      }
-
-      ul {
-        margin: 0;
-        padding: 0;
+      .menu-container {
         display: flex;
+        justify-content: center;
         flex-direction: column;
+        max-width: 720px;
+        margin: 0 auto;
 
-        li.card {
-          display: flex;
+        h3 {
           position: relative;
-          list-style: none;
-          margin-bottom: 20px;
-          box-shadow: $shadow;
-          border-radius: 20px;
-          background-color: $grey-light;
-          overflow: hidden;
-          animation: fadeInUp .6s linear;
-          animation-fill-mode: both;
-
-          &:nth-child(1) { animation-delay: .2s; }
-          &:nth-child(2) { animation-delay: .4s; }
-          &:nth-child(3) { animation-delay: .6s; }
+          width: auto;
+          text-transform: uppercase;
+          color: $grey-text-light;  
           
-          .card-wrapper {
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 4px;
+            background-color: $third-color;
+          }
+        }
+
+        &:nth-child(1) h3 { 
+          animation-delay: 0s; 
+        }
+        
+        &:nth-of-type(2) h3 { 
+          opacity: 0; 
+          animation-delay: .9s; 
+        }
+        &:nth-of-type(3) h3 { 
+          opacity: 0; 
+          animation-delay: 1.8s; 
+        }
+  
+        ul {
+          margin: 0 0 30px;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+  
+          &:last-of-type {
+            margin: 0;
+          }
+  
+          li.card {
             display: flex;
-            padding: 13px;
-            flex-grow: 1;
-            flex-direction: column;
+            position: relative;
+            list-style: none;
+            margin-bottom: 20px;
+            box-shadow: $shadow;
+            border-radius: 20px;
+            background-color: $grey-light;
             overflow: hidden;
-            flex-shrink: 10;
+            animation: fadeInUp .6s linear;
+            animation-fill-mode: both;
+  
+            &:nth-child(1) { animation-delay: .2s; }
+            &:nth-child(2) { animation-delay: .4s; }
+            &:nth-child(3) { animation-delay: .6s; }
             
-            .card-title {
-              font-size: 1.2em;
-              font-weight: 500;
-              margin: 0;
-              flex: 1;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            }
-            
-            .card-content {
+            .card-wrapper {
               display: flex;
-              justify-content: space-between;
-
-              p {
-                margin: 5px 0;
-                font-size: .9em;
-                color: $grey-text-light;
-                font-weight: 500;
-
-                &:nth-child(1) {
-                  flex: 1;
-                  white-space: nowrap;
-                  overflow: hidden;
-                  text-overflow: ellipsis;
-                  width: 100px;
-                }
-                
-                &:nth-child(2) {
-                  color: black;
-                }
-              }
-            }
-          }
-
-          .card-validate {
-            display: flex;
-            overflow: hidden;
-            align-items: center;
-            align-self: stretch;
-            background-color: $validate-color;
-            border-radius: 0 20px 20px 0;
-            transition: width .4s;
-            width: 0;
-            
-            i {
-              display: none;
-              padding: 0 25px;
+              padding: 13px;
+              flex-grow: 1;
+              flex-direction: column;
+              overflow: hidden;
+              flex-shrink: 10;
               
-              &::before {
-                background-color: white;
-                padding: 3px;
-                border-radius: 100%;
-                color: $validate-color;
+              .card-title {
+                font-size: 1.2em;
+                font-weight: 500;
+                margin: 0;
+                flex: 1;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              
+              .card-content {
+                display: flex;
+                justify-content: space-between;
+  
+                p {
+                  margin: 5px 0;
+                  font-size: .9em;
+                  color: $grey-text-light;
+                  font-weight: 500;
+  
+                  &:nth-child(1) {
+                    flex: 1;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 100px;
+                  }
+                  
+                  &:nth-child(2) {
+                    color: black;
+                  }
+                }
+              }
+            }
+  
+            .card-validate {
+              display: flex;
+              overflow: hidden;
+              align-items: center;
+              align-self: stretch;
+              background-color: $validate-color;
+              border-radius: 0 20px 20px 0;
+              transition: width .4s;
+              width: 0;
+              
+              i {
+                display: none;
+                padding: 0 25px;
+                
+                &::before {
+                  background-color: white;
+                  padding: 3px;
+                  border-radius: 100%;
+                  color: $validate-color;
+                }
+              }
+            }
+            
+            &:hover .card-validate {
+              width: 70px;
+              transition: width .4s;
+              
+              i {
+                display: block;
+                box-sizing: border;
+                animation-name: buttonAnim;
+                animation-duration: .4s;
+                animation-delay: .2s;
               }
             }
           }
-          
-          &:hover .card-validate {
-            width: 70px;
-            transition: width .4s;
-            
-            i {
-              display: block;
-              box-sizing: border;
-              animation-name: buttonAnim;
-              animation-duration: .4s;
-              animation-delay: .2s;
-            }
+  
+          &.plat li { 
+            &:nth-child(1) { animation-delay: 1.2s; }
+            &:nth-child(2) { animation-delay: 1.4s; }
+            &:nth-child(3) { animation-delay: 1.6s; }
           }
-        }
-
-        &.plat li { 
-          &:nth-child(1) { animation-delay: 1.2s; }
-          &:nth-child(2) { animation-delay: 1.4s; }
-          &:nth-child(3) { animation-delay: 1.6s; }
-        }
-
-        &.dessert li { 
-          &:nth-child(1) { animation-delay: 2.2s; }
-          &:nth-child(2) { animation-delay: 2.4s; }
-          &:nth-child(3) { animation-delay: 2.6s; }
+  
+          &.dessert li { 
+            &:nth-child(1) { animation-delay: 2.2s; }
+            &:nth-child(2) { animation-delay: 2.4s; }
+            &:nth-child(3) { animation-delay: 2.6s; }
+          }
         }
       }
     }
