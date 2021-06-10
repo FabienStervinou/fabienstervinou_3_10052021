@@ -1,0 +1,15 @@
+@import '../abstracts//variables';
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow {
+  box-shadow: $shadow;
+}
+
+.fadeInRight {
+  animation: fadeInRight .6s forwards;
+}

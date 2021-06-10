@@ -1,0 +1,16 @@
+@import 'abstracts/variables';
+@import 'abstracts/animations';
+@import 'abstracts/global';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'components/button';
+@import 'components/heart';
+@import 'components/loader';
+
+@import 'layout/footer';
+@import 'layout/header';
+
+@import 'pages/home';
+@import 'pages/menu';

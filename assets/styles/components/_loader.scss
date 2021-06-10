@@ -1,0 +1,42 @@
+.loader {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(252, 252, 252);
+  animation: loader-container 3.6s forwards cubic-bezier(1, 0.09, 0.93, 0.07);
+  z-index: 10;
+  
+  .ball-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  
+    .ball {
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      margin: 0 10px;
+      animation-name: loader;
+      animation-duration: 1s;
+      animation-iteration-count: 3;
+    
+      &-1 {
+        background-color: $primary-color;
+      }
+    
+      &-2 {
+        background-color: $secondary-color;
+        animation-delay: 0.1s;
+      }
+    
+      &-3 {
+        background-color: $third-color;
+        animation-delay: 0.2s;
+      }
+    }
+  }
+}
