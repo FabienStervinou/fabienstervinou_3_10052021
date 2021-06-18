@@ -411,7 +411,8 @@ body .restaurants .restaurants-container .card.new::before {
 }
 .menu .restaurant__menu header h2 {
   margin: 10px 0 0 0;
-  font-size: 2em;
+  font-size: 1.8em;
+  font-weight: 400;
   font-family: "Shrikhand", "cursive";
 }
 .menu .restaurant__menu .restaurant__menu-list .menu-container {
@@ -540,7 +541,6 @@ body .restaurants .restaurants-container .card.new::before {
 }
 .menu .restaurant__menu .restaurant__menu-list .menu-container ul li.card:hover .card-validate i {
   display: block;
-  box-sizing: border;
   animation-name: buttonAnim;
   animation-duration: 0.4s;
   animation-delay: 0.2s;
