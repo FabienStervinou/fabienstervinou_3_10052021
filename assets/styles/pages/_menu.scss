@@ -107,10 +107,11 @@
               flex-shrink: 10;
               
               .card-title {
-                font-size: 1.2em;
-                font-weight: 500;
+                width: calc(100% - 30px);
                 margin: 0;
                 flex: 1;
+                font-size: 1.2em;
+                font-weight: 500;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -136,6 +137,8 @@
                   
                   &:nth-child(2) {
                     color: black;
+                    min-width: 30px;
+                    text-align: end;
                   }
                 }
               }

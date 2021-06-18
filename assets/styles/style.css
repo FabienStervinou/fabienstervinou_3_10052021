@@ -487,10 +487,11 @@ body .restaurants .restaurants-container .card.new::before {
   flex-shrink: 10;
 }
 .menu .restaurant__menu .restaurant__menu-list .menu-container ul li.card .card-wrapper .card-title {
-  font-size: 1.2em;
-  font-weight: 500;
+  width: calc(100% - 30px);
   margin: 0;
   flex: 1;
+  font-size: 1.2em;
+  font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -514,6 +515,8 @@ body .restaurants .restaurants-container .card.new::before {
 }
 .menu .restaurant__menu .restaurant__menu-list .menu-container ul li.card .card-wrapper .card-content p:nth-child(2) {
   color: black;
+  min-width: 30px;
+  text-align: end;
 }
 .menu .restaurant__menu .restaurant__menu-list .menu-container ul li.card .card-validate {
   display: flex;
