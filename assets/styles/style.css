@@ -239,7 +239,7 @@ body .location .container img {
   margin-right: 10px;
   height: 18px;
 }
-body .location .container p {
+body .location .container h2 {
   margin: 0;
   font-weight: bold;
   opacity: 0.7;
@@ -338,7 +338,7 @@ body .restaurants .restaurants-container h2 {
 }
 body .restaurants .restaurants-container .card {
   width: 100%;
-  height: 27P0px;
+  height: 270px;
   border-radius: 15px;
   background-color: white;
   margin-bottom: 20px;
