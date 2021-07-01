@@ -243,6 +243,7 @@ body .location .container h2 {
   margin: 0;
   font-weight: bold;
   opacity: 0.7;
+  font-size: 1em;
 }
 body .explore {
   flex-direction: column;
